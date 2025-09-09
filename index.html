@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naruto RP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="login-section" class="section">
+    <h1>Naruto RP Login</h1>
+    <form id="login-form" autocomplete="off">
+      <label for="username">Username</label>
+      <input id="username" name="username" required>
+      <label for="password">Password</label>
+      <input id="password" type="password" name="password" required>
+      <button type="submit">Login</button>
+      <p id="login-error" class="error hidden" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <div id="app" class="hidden">
+    <nav class="navbar">
+      <span class="logo">Naruto RP</span>
+      <div class="actions">
+        <button id="settings-btn" aria-label="Open settings"></button>
+        <button id="logout">Logout</button>
+      </div>
+    </nav>
+
+    <main class="content">
+      <section id="character-form-section">
+        <h2>Create Character</h2>
+        <form id="character-form">
+          <div class="field">
+            <label for="char-name">Name</label>
+            <input id="char-name" required />
+          </div>
+          <div class="field">
+            <label for="char-clan">Clan</label>
+            <input id="char-clan" />
+          </div>
+          <div class="field">
+            <label for="char-element">Element</label>
+            <input id="char-element" />
+          </div>
+          <div class="field">
+            <label for="char-description">Description</label>
+            <textarea id="char-description"></textarea>
+          </div>
+          <button type="submit">Save</button>
+        </form>
+      </section>
+
+      <section id="characters-list">
+        <h2>Your Characters</h2>
+        <ul id="character-output"></ul>
+      </section>
+
+      <section id="chat-section">
+        <h2>Ninja Chat</h2>
+        <ul id="chat-log"></ul>
+        <form id="chat-form">
+          <input id="chat-input" placeholder="Speak with the AI" />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <div id="settings-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Settings</h2>
+      <button id="theme-toggle">Toggle Theme</button>
+      <button id="close-settings">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

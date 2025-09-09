@@ -1,0 +1,9 @@
+{
+  "name": "naruto-rp",
+  "version": "1.0.0",
+  "description": "Minimal Naruto roleplay web app",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}
